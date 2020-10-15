@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1022715509170",
+    "firebase_url": "https://potential-c447b.firebaseio.com",
+    "project_id": "potential-c447b",
+    "storage_bucket": "potential-c447b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022715509170:android:e0fc322666cc1e89cc8cab",
+        "android_client_info": {
+          "package_name": "com.example.potential"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022715509170-nb0c9ff4i2ukaq5kfnh2amnblpo8ff3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO-jQr2jkqFa_LC-kC_at0YZtUd2P_tAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022715509170-nb0c9ff4i2ukaq5kfnh2amnblpo8ff3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
