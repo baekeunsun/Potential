@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Signup extends AppCompatActivity {
     private static final String TAG = "SignUpActivity";
     private FirebaseAuth mAuth;
-//하이요!
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,14 @@ public class Signup extends AppCompatActivity {
         findViewById(R.id.gotologinbutton).setOnClickListener(onClickListener);
 
     }
+    @Override
+    public void onBackPressed(){
 
+        super.onBackPressed();
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        finish();
+    }
     @Override
     public void onStart() {
         super.onStart();
@@ -50,8 +57,6 @@ public class Signup extends AppCompatActivity {
                     break;
                 case R.id.gotologinbutton:
                     startLogin();
-
-
                     break;
 
             }
@@ -75,6 +80,8 @@ public class Signup extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     startToast("회원가입이 되었습니다.");
+                                    Intent intent = new Intent(Signup.this, Login.class);
+                                    startActivity(intent);
 
                                     //UI
                                 } else {

@@ -1,5 +1,6 @@
 package com.example.potential;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -62,6 +63,7 @@ public class Login extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("로그인에 성공하셨습니다.");
+                                startMainactivity();
                             } else {
                                 if(task.getException()!=null){
                                     startToast(task.getException().toString());
@@ -83,5 +85,10 @@ public class Login extends AppCompatActivity {
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 
+    private void startMainactivity (){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+    }
 
 }
