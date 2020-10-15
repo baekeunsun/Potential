@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Signup extends AppCompatActivity {
     private static final String TAG = "SignUpActivity";
     private FirebaseAuth mAuth;
-
+//하이요!
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
