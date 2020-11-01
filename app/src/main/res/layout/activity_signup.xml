@@ -4,16 +4,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 <!--test-->
-    <TextView
-        android:id="@+id/textView"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        >
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="215dp"
+        android:layout_height="214dp"
         android:layout_weight="0"
+        android:background="@drawable/sun"
         android:gravity="center"
+        android:layout_marginLeft="100dp"
+        android:fontFamily="@font/typo_crayonb"
         android:text="회원가입"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="40dp"
+
         android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,40 +35,76 @@
         android:orientation="vertical"
         android:padding="10dp">
 
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:text="ID"
+            android:textColor="@color/black" />
+
         <EditText
             android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:ems="10"
             android:hint="이메일"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:layout_width="66dp"
+            android:layout_height="16dp"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            />
 
         <EditText
             android:id="@+id/passEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:ems="10"
             android:hint="비밀번호"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:text="Password Check"
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/passCheckEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:ems="10"
             android:hint="비밀번호 확인"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:background="@color/gray"/>
 
         <Button
+            android:layout_marginTop="16dp"
             android:id="@+id/loginbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="회원가입" />
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="회원가입"
+            android:background="@color/red"
+            android:fontFamily="@font/typo_crayonb"/>
 
         <Button
             android:id="@+id/gotologinbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@color/red"
+            android:fontFamily="@font/typo_crayonb"
             android:text="로그인" />
     </LinearLayout>
 

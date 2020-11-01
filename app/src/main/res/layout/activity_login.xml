@@ -18,7 +18,7 @@
             android:background="@drawable/moon"
             android:gravity="center"
             android:layout_marginLeft="100dp"
-            android:fontFamily="@font/Typo_CrayonB"
+            android:fontFamily="@font/typo_crayonb"
             android:text="로그인"
             android:textColor="#000000"
             android:textSize="40dp"
@@ -73,7 +73,7 @@
             android:layout_marginTop="16dp"
             android:text="로그인"
             android:background="@color/yellow"
-            android:fontFamily="@font/Typo_CrayonB"
+            android:fontFamily="@font/typo_crayonb"
 
             />
     </LinearLayout>
