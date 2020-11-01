@@ -73,28 +73,30 @@
         android:orientation="vertical">
 
 
-        <EditText
+        <TextView
             android:id="@+id/chang_won"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@color/gray"
-            android:ems="10"
             android:fontFamily="@font/typo_crayonb"
             android:text="창원"
+            android:textSize="20dp"
+            android:gravity="center"
             android:textAlignment="center" />
 
 
-        <EditText
+        <TextView
             android:id="@+id/jin_ju"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@color/gray"
-            android:ems="10"
             android:fontFamily="@font/typo_crayonb"
+            android:gravity="center"
             android:text="진주"
+            android:textSize="20dp"
             android:textAlignment="center" />
 
 

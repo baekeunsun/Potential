@@ -86,7 +86,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void startMainactivity (){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Board.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
