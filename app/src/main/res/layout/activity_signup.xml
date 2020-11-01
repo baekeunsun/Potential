@@ -77,7 +77,6 @@
             android:text="Password Check"
             android:textColor="@color/black" />
 
-
         <EditText
             android:id="@+id/passCheckEditText"
             android:layout_width="350dp"
