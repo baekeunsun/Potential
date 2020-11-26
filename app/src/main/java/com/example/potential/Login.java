@@ -44,42 +44,12 @@ public class Login extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.loginbutton:
                     Log.e("클릭","클릭");
-                    Login();
                     break;
             }
         }
     };
 
-    private void Login() {
 
-        String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
-        String password = ((EditText)findViewById(R.id.passEditText)).getText().toString();
-
-        if(email.length() > 0 && password.length() > 0 ){
-            mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                startToast("로그인에 성공하셨습니다.");
-                                startMainactivity();
-                            } else {
-                                if(task.getException()!=null){
-                                    startToast(task.getException().toString());
-
-                                }
-                            }
-
-                            // ...
-                        }
-                    });
-
-        }else{
-            startToast("이메일 또는 비밀번호를 입력해주세요.");
-        }
-
-    }
 
     private void startToast(String msg){
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
