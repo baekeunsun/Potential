@@ -1,6 +1,6 @@
 package com.example.potential;
 
-public class User {
+public class User  {
     private String star;
     private String name;
     private String terri;
