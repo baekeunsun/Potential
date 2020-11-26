@@ -55,7 +55,11 @@ public class Board extends AppCompatActivity {
                 }
                 adapter.notifyDataSetChanged(); //리스트 저장 및 새로 고침
             }
-
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //디비를 가져오던 중 에러 발생 시
+                Log.e("",String.valueOf(databaseError.toException())); //에러문출력
+            }
 
         });
 
