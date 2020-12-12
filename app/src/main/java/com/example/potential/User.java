@@ -1,6 +1,8 @@
 package com.example.potential;
 
-public class User  {
+import android.graphics.Movie;
+
+public class User implements Comparable<User>  {
     private String star;
     private String name;
     private String terri;
@@ -38,6 +40,10 @@ public class User  {
 
     public void setPro(String pro) {
         this.pro = pro;
+    }
+
+    public int compareTo(User user) {
+        return this.star.compareTo(user.star);
     }
 }
 
