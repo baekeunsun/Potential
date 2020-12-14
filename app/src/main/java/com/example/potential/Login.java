@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
+    private static final String TAG = "SignUpActivity";
     private FirebaseAuth mAuth;
 
     @Override
@@ -24,19 +25,19 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mAuth = FirebaseAuth.getInstance(); //파이어베이스 정보 얻기
+        // Initialize Firebase mAuth
+        mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.loginbutton).setOnClickListener(onClickListener); //로그인버튼
+        findViewById(R.id.loginbutton).setOnClickListener(onClickListener);
     }
 
-    //시작할 때 로그인이 되있는지 체크
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
-    //로그인 버튼
+
     View.OnClickListener onClickListener = new View.OnClickListener(){
         @Override
         public void onClick (View v){
@@ -48,7 +49,6 @@ public class Login extends AppCompatActivity {
             }
         }
     };
-    //데이터베이스에서 로그인 정보를 가져와서 확인한다
     private void Login() {
 
         String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
@@ -80,11 +80,11 @@ public class Login extends AppCompatActivity {
         }
 
     }
-    //로그인 성공하였을때 토스트 메세지를 보여주는 함수
+
     private void startToast(String msg){
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
-    //Board로 이동하는 함수
+
     private void startMainactivity (){
         Intent intent = new Intent(this, Board.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);

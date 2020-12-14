@@ -26,10 +26,10 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         // Initialize Firebase mAuth
-        mAuth = FirebaseAuth.getInstance(); //파이어베이스 정보얻기
+        mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.loginbutton).setOnClickListener(onClickListener); //회원가입버튼
-        findViewById(R.id.gotologinbutton).setOnClickListener(onClickListener);//로그인버튼
+        findViewById(R.id.loginbutton).setOnClickListener(onClickListener);
+        findViewById(R.id.gotologinbutton).setOnClickListener(onClickListener);
 
     }
     @Override
@@ -43,6 +43,7 @@ public class Signup extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
@@ -57,11 +58,9 @@ public class Signup extends AppCompatActivity {
                 case R.id.gotologinbutton:
                     startLogin();
                     break;
-
             }
         }
     };
-    //회원가입 함수
     private void signUp() {
 
         String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
@@ -100,11 +99,12 @@ public class Signup extends AppCompatActivity {
         }
 
     }
-    //로그인 성공 토스트 메세지
+
+
     private void startToast(String msg){
         Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
-    //Login화면으로 이동하는 함수
+
     private void startLogin(){
         Intent intent = new Intent( this, Login.class);
         startActivity(intent);
