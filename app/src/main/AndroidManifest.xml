@@ -18,6 +18,8 @@
         <activity android:name=".Login"/>
         <activity android:name=".Signup"/>
         <activity android:name=".Board"/>
+        <activity android:name=".GalleryActivity"/>
+        <activity android:name=".Rating"/>
 
     </application>
 

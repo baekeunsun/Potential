@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,6 +17,7 @@
             android:layout_height="30dp"
             android:gravity="center">
             <EditText
+                android:id="@+id/search"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:hint="상담센터 찾기"
@@ -33,28 +35,50 @@
 
     </LinearLayout>
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="고민 키워드"
-                android:textSize="20dp"
-                android:gravity="left"
-                android:fontFamily="@font/typo_crayonb"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="추천순  정확도순  이름순"
-                android:textAlignment="textEnd"
-                android:textSize="20dp"
-                android:fontFamily="@font/typo_crayonb"
-               />
-    </LinearLayout>
+        android:layout_margin="10dp">
 
+        <TextView
+            android:id="@+id/tv_recommend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/typo_crayonb"
+            android:text="추천순"
+            android:gravity="center"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="5dp"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintHorizontal_bias="0.987"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/typo_crayonb"
+            android:text="이름순"
+            android:gravity="center"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="5dp"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="20dp"

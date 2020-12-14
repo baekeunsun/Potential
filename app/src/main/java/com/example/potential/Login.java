@@ -60,6 +60,7 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                PreferenceManager.setString(Login.this,"email",email);
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("로그인에 성공하셨습니다.");
                                 startMainactivity();

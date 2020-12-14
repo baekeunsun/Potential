@@ -35,11 +35,13 @@
                 android:layout_height="20dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/ic_launcher_background"/>
+
                 <TextView
+                    android:id="@+id/tv_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5.0"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                     />
                 <TextView
                     android:id="@+id/tv_terri"
                     android:layout_width="wrap_content"
@@ -56,6 +58,20 @@
                 android:layout_height="wrap_content"
                 android:text="상담프로그램"
                 android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tv_addr"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tv_number"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tv_board"/>
+
 
 
 
