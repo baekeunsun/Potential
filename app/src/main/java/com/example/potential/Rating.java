@@ -62,7 +62,7 @@ public class Rating extends AppCompatActivity {
     }
 
     public  void updateUser(String rating){
-        Counseilingdatabase.child("user_00").child("rating").setValue(rating);
+        Counseilingdatabase.child(getIntent().getStringExtra("position")).child("rating").setValue(rating);
 
     }
     public void insertData()

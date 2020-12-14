@@ -95,6 +95,8 @@ public class GalleryActivity extends AppCompatActivity {
                 Intent intent=new Intent(GalleryActivity.this, Rating.class);
                 intent.putExtra("name",getIntent().getStringExtra("image_name"));
                 intent.putExtra("rating",getIntent().getStringExtra("rating"));
+                intent.putExtra("position",getIntent().getStringExtra("position"));
+
                 startActivity(intent);
             }
         });
